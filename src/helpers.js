@@ -35,3 +35,18 @@ var Seed = (function(){
 		}
 	}
 })();
+
+
+
+
+//Draw helper
+var drawPointHelper = function(ctx, x, y, w, h, value){
+
+		ctx.fillStyle = "#000";
+
+		if(value == 0) {
+			ctx.fillStyle = "#fff";			
+		}
+		
+	  ctx.fillRect (x, y, 1, 1);
+};

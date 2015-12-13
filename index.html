@@ -13,11 +13,11 @@
     		<legend>Cave size</legend>
 				<div>
 					<label for="cave_width">Width</label>
-					<input id="cave_width" type="text" value="800" />
+					<input id="cave_width" type="text" value="200" />
 				</div>
 				<div>
 					<label for="cave_height">Height</label>
-					<input id="cave_height" type="text" value="400" />
+					<input id="cave_height" type="text" value="100" />
 				</div>
 			</fieldset>
 
@@ -32,8 +32,25 @@
 					<input id="cave_fill" type="range" value="40" min="0" max="100" />
 				</div>
 			</fieldset>
+
+			<fieldset class="special">
+    		<legend>Generation</legend>
+				<div>
+					<label for="cave_smooth_steps">Steps</label>
+					<input id="cave_smooth_steps" type="text" value="5" />
+				</div>
+				<div>
+					<label for="cave_neighbourhood_limiter">Neighbourhood limiter</label>
+					<input id="cave_neighbourhood_limiter" type="text" value="4" />
+				</div>
+				<div>
+					<label for="cave_neighbourhood_depht">Neighbourhood depht</label>
+					<input id="cave_neighbourhood_depht" type="text" value="1" />
+				</div>
+			</fieldset>
+
 			<div class="apply_container">
-				<button type="button">Apply</button>
+				<button id="apply_cave_settings" type="button">Apply</button>
 			</div>
 		</form>
 

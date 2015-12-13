@@ -40,6 +40,15 @@ label {
 	margin: 0 10px 0 0;
 }
 
+
+.special {
+	width: 620px;
+}
+
+.special label {
+	width: 200px;
+}
+
 .apply_container {
 	clear: both;
 	padding: 10px;
