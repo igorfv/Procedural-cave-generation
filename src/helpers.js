@@ -13,27 +13,27 @@ String.prototype.hashCode = function() {
 
 // Generate random from Seed
 var Seed = (function(){
-	return {
-		"value" : 0,
-		"setValue" : function setValue(value) {
-			if(typeof value != "number") {
-				if(typeof value == "string") {
-					this.value = value.hashCode();
-				}
-				else {
-					this.value = Math.random()*(Math.pow(1000, 3)) << 0;
-				}
-			}
-			else
-			{
-				this.value = value;
-			}
-		},
-		"random" : function random() {
-		  var x = Math.sin(this.value++) * 10000;
-		  return x - Math.floor(x);
-		}
-	}
+  return {
+    "value" : 0,
+    "setValue" : function setValue(value) {
+      if(typeof value != "number") {
+        if(typeof value == "string") {
+          this.value = value.hashCode();
+        }
+        else {
+          this.value = Math.random()*(Math.pow(1000, 3)) << 0;
+        }
+      }
+      else
+      {
+        this.value = value;
+      }
+    },
+    "random" : function random() {
+      var x = Math.sin(this.value++) * 10000;
+      return x - Math.floor(x);
+    }
+  }
 })();
 
 
@@ -42,11 +42,11 @@ var Seed = (function(){
 //Draw helper
 var drawPointHelper = function(ctx, x, y, w, h, value){
 
-		ctx.fillStyle = "#000";
+    ctx.fillStyle = "#000";
 
-		if(value == 0) {
-			ctx.fillStyle = "#fff";			
-		}
-		
-	  ctx.fillRect (x, y, 1, 1);
+    if(value == 0) {
+      ctx.fillStyle = "#fff";     
+    }
+    
+    ctx.fillRect (x, y, 1, 1);
 };
