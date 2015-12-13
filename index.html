@@ -8,7 +8,7 @@
 			<canvas id="cave"></canvas>
 		</div>
 
-		<form oninput="fill_amount.value=cave_fill.value; limiter_amount.value=cave_neighbourhood_limiter.value">
+		<form id="apply_cave_settings" oninput="fill_amount.value=cave_fill.value; limiter_amount.value=cave_neighbourhood_limiter.value">
 			<fieldset>
     		<legend>Cave size</legend>
 				<div>
@@ -50,7 +50,7 @@
 			</fieldset>
 
 			<div class="apply_container">
-				<button id="apply_cave_settings" type="button">Apply</button>
+				<button type="submit">Apply</button>
 			</div>
 		</form>
 

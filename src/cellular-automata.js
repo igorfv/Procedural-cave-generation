@@ -107,7 +107,7 @@
 
 
   // Initiate script
-  var init = function init() {
+  var init = function init(e) {
     var
       width = document.getElementById("cave_width").value || 200,
       height = document.getElementById("cave_height").value || 100,
@@ -118,9 +118,11 @@
       depht = document.getElementById("cave_neighbourhood_depht").value || 1
 
     generateCave(width, height, seed, fill, steps, limiter, depht);
+
+    e.preventDefault();
   };
 
-  document.getElementById("apply_cave_settings").addEventListener("click", init);
+  document.getElementById("apply_cave_settings").addEventListener("submit", init);
   init()
 
 })();
