@@ -8,7 +8,7 @@
 			<canvas id="cave"></canvas>
 		</div>
 
-		<form oninput="fill_amount.value=cave_fill.value">
+		<form oninput="fill_amount.value=cave_fill.value; limiter_amount.value=cave_neighbourhood_limiter.value">
 			<fieldset>
     		<legend>Cave size</legend>
 				<div>
@@ -28,7 +28,7 @@
 					<input id="cave_seed" type="text" value="Igor" />
 				</div>
 				<div>
-					<label for="cave_fill">Fill <output name="fill_amount" for="cave_fill">47</output>%</label>
+					<label for="cave_fill">Fill: <output name="fill_amount" for="cave_fill">47</output>%</label>
 					<input id="cave_fill" type="range" value="47" min="0" max="100" />
 				</div>
 			</fieldset>
@@ -40,12 +40,12 @@
 					<input id="cave_smooth_steps" type="text" value="5" />
 				</div>
 				<div>
-					<label for="cave_neighbourhood_limiter">Neighbourhood limiter</label>
-					<input id="cave_neighbourhood_limiter" type="text" value="4" />
+					<label for="cave_neighbourhood_limiter">Neighbourhood limiter:  <output name="limiter_amount" for="cave_neighbourhood_limiter">4</output></label>
+					<input id="cave_neighbourhood_limiter" type="range" value="4" min="4" max="5" />
 				</div>
 				<div>
 					<label for="cave_neighbourhood_depht">Neighbourhood depht</label>
-					<input id="cave_neighbourhood_depht" type="text" value="1" />
+					<input id="cave_neighbourhood_depht" type="text" value="1" disabled />
 				</div>
 			</fieldset>
 
