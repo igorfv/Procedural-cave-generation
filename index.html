@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="src/styles.css">
+	</head>
+	<body>
+		
+		<div id="canvas_container">
+			<canvas id="cave"></canvas>
+		</div>
+
+		<form oninput="fill_amount.value=cave_fill.value">
+			<fieldset>
+    		<legend>Cave size</legend>
+				<div>
+					<label for="cave_width">Width</label>
+					<input id="cave_width" type="text" value="800" />
+				</div>
+				<div>
+					<label for="cave_height">Height</label>
+					<input id="cave_height" type="text" value="400" />
+				</div>
+			</fieldset>
+
+			<fieldset>
+    		<legend>Seed</legend>
+				<div>
+					<label for="cave_seed">Value</label>
+					<input id="cave_seed" type="text" value="Igor" />
+				</div>
+				<div>
+					<label for="cave_fill">Fill <output name="fill_amount" for="cave_fill">40</output>%</label>
+					<input id="cave_fill" type="range" value="40" min="0" max="100" />
+				</div>
+			</fieldset>
+			<div class="apply_container">
+				<button type="button">Apply</button>
+			</div>
+		</form>
+
+
+
+		<script src="src/helpers.js"></script>
+		<script src="src/cellular-automata.js"></script>
+	</body>
+</html>
